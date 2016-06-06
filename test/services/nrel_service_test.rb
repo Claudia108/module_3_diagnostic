@@ -7,7 +7,11 @@ class RrelServiceTest < ActiveSupport::TestCase
       stations = service.stations_hash
 
       refute stations.nil?
-      assert_equal "asdf", stations[0][:name]
+      assert_equal "CADACHARGEPOINT", stations[:fuel_stations][0][:station_name]
+      assert_equal "CADACHARGEPOINT", stations[:fuel_stations][0][:street_address]
+      assert_equal "CADACHARGEPOINT", stations[:fuel_stations][0][:city]
+      assert_equal "CADACHARGEPOINT", stations[:fuel_stations][0][:zip]
+      assert_equal "CADACHARGEPOINT", stations[:fuel_stations][0][:access_day_time]
     end
   end
 
