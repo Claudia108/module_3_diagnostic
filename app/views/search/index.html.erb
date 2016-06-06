@@ -1,0 +1,8 @@
+<h1>Stations in your vicinity</h1>
+
+<% @stations.each do |station| %>
+
+  <p><%= station[:station_name] %></p>
+  <p><%= station[:street_address] %>, <%= station[:city] %>, <%= station[:zip] %></p>
+  <p> <%= station[:access_days_time] %></p>
+  <% end %>

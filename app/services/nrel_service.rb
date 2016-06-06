@@ -14,10 +14,6 @@ class NrelService
     parse(@connection.get "api/alt-fuel-stations/v1.json?api_key=#{ENV['nrel_api_key']}&fuel_type=LPG,ELEC&zip=#{zip}&limit=10")
   end
 
-  def stations
-    stations_hash[:fuel_stations].each do |station|
-      staion[0][:name]
-    end
-  end
+
 
 end
